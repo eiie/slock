@@ -1,19 +1,21 @@
 /* user and group to drop privileges to */
 static const char *user  = "nobody";
-static const char *group = "nogroup";
+static const char *group = "nobody";
 
 static const char *colorname[NUMCOLS] = {
-	[BACKGROUND] =   "black",     /* after initialization */
-	[INIT] =   "#2d2d2d",     /* after initialization */
-	[INPUT] =  "#005577",   /* during input */
-	[FAILED] = "#CC3333",   /* wrong password */
+	[BACKGROUND] = "black",     /* after initialization */
+	[INIT] = "#2d2d2d",     /* after initialization */
+	[INPUT] = "#90a959", /* during input */
+	/* [INPUT] =  "#005577",   /1* during input *1/ */
+	[FAILED] = "#2d2d2d",     /* wrong password */
+	/* [FAILED] = "#CC3333",   /1* wrong password *1/ */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
 /* insert grid pattern with scale 1:1, the size can be changed with logosize */
-static const int logosize = 75;
+static const int logosize = 22;
 static const int logow = 12;	/* grid width and height for right center alignment*/
 static const int logoh = 6;
 
